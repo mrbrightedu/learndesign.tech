@@ -3,34 +3,36 @@
    Theme tokens
    ============================================================ */
 :root {
-  --bg:        #f7f6f3;
-  --surface:   #ffffff;
-  --surface-2: #f0eee9;
-  --ink:       #14171a;
-  --ink-soft:  #4a4f55;
-  --ink-faint: #8a9097;
-  --line:      #e6e3dc;
-  --accent:    #ff6a3d;
-  --accent-2:  #2563eb;
-  --accent-soft: #fff0ea;
+  --bg:        #faf4ea;
+  --surface:   #fffdf8;
+  --surface-2: #f3e9d8;
+  --ink:       #2a2018;
+  --ink-soft:  #6e5e50;
+  --ink-faint: #a3917f;
+  --line:      #ece0cd;
+  --accent:    #e8623c;
+  --accent-2:  #e0962f;
+  --accent-soft: #fdeee4;
   --radius:    18px;
   --radius-sm: 12px;
-  --shadow:    0 1px 2px rgba(20,23,26,.04), 0 12px 32px -12px rgba(20,23,26,.14);
-  --shadow-lg: 0 24px 60px -20px rgba(20,23,26,.30);
+  --shadow:    0 1px 2px rgba(74,52,32,.05), 0 12px 32px -12px rgba(74,52,32,.18);
+  --shadow-lg: 0 24px 60px -20px rgba(74,52,32,.32);
   --maxw:      1120px;
   --font-display: "Space Grotesk", system-ui, sans-serif;
   --font-body: "Inter", system-ui, -apple-system, sans-serif;
 }
 
 [data-theme="dark"] {
-  --bg:        #0e1013;
-  --surface:   #16191d;
-  --surface-2: #1d2126;
-  --ink:       #f2f4f6;
-  --ink-soft:  #b3bac1;
-  --ink-faint: #7d858d;
-  --line:      #272c32;
-  --accent-soft: #2a1d18;
+  --bg:        #17120e;
+  --surface:   #201a15;
+  --surface-2: #29211b;
+  --ink:       #f6ede1;
+  --ink-soft:  #c8b6a4;
+  --ink-faint: #8f7d6c;
+  --line:      #342a22;
+  --accent:    #f2774d;
+  --accent-2:  #eda849;
+  --accent-soft: #2e1f16;
   --shadow:    0 1px 2px rgba(0,0,0,.3), 0 12px 32px -12px rgba(0,0,0,.6);
   --shadow-lg: 0 24px 60px -20px rgba(0,0,0,.7);
 }
@@ -58,7 +60,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 700; line-height: 1.
 a { color: inherit; text-decoration: none; }
 
 .grad {
-  background: linear-gradient(100deg, var(--accent), #ff9a3d);
+  background: linear-gradient(100deg, var(--accent), var(--accent-2));
   -webkit-background-clip: text; background-clip: text; color: transparent;
 }
 
@@ -120,8 +122,9 @@ a { color: inherit; text-decoration: none; }
 .hero__bg {
   position: absolute; inset: -20% -10% auto -10%; height: 120%;
   background:
-    radial-gradient(40% 50% at 18% 20%, rgba(255,106,61,.20), transparent 70%),
-    radial-gradient(35% 45% at 85% 15%, rgba(37,99,235,.16), transparent 70%);
+    radial-gradient(45% 55% at 16% 18%, rgba(232,98,60,.26), transparent 70%),
+    radial-gradient(40% 50% at 88% 12%, rgba(224,150,47,.24), transparent 70%),
+    radial-gradient(50% 60% at 60% 90%, rgba(232,98,60,.10), transparent 70%);
   filter: blur(4px); z-index: 0;
 }
 .hero__bg::after {
@@ -224,16 +227,16 @@ a { color: inherit; text-decoration: none; }
   font-size: .72rem; letter-spacing: .03em; text-transform: uppercase;
   padding: .28rem .7rem; border-radius: 999px; background: var(--surface-2); color: var(--ink-soft);
 }
-.tag--3d      { background: #eaf3ff; color: #2563eb; }
-.tag--fusion  { background: #fff0ea; color: #ff6a3d; }
-.tag--laser   { background: #fdeaea; color: #d83b3b; }
-.tag--projects{ background: #eafaf0; color: #1f9d57; }
-.tag--howto   { background: #f3eaff; color: #8b3df0; }
-[data-theme="dark"] .tag--3d      { background: #16243d; color: #6fa8ff; }
-[data-theme="dark"] .tag--fusion  { background: #2a1d18; color: #ff8a63; }
-[data-theme="dark"] .tag--laser   { background: #2e1818; color: #ff7676; }
-[data-theme="dark"] .tag--projects{ background: #14291d; color: #5fd292; }
-[data-theme="dark"] .tag--howto   { background: #221833; color: #b885ff; }
+.tag--3d      { background: #fbecc9; color: #a9781a; }
+.tag--fusion  { background: #fde4d9; color: #cf5530; }
+.tag--laser   { background: #fadfd6; color: #bf402a; }
+.tag--projects{ background: #edefd2; color: #6c7a2c; }
+.tag--howto   { background: #f5e1da; color: #a85f3e; }
+[data-theme="dark"] .tag--3d      { background: #2e2410; color: #e0ac4d; }
+[data-theme="dark"] .tag--fusion  { background: #2e1d14; color: #f2885f; }
+[data-theme="dark"] .tag--laser   { background: #2f1a13; color: #f17a5d; }
+[data-theme="dark"] .tag--projects{ background: #232711; color: #b6c45c; }
+[data-theme="dark"] .tag--howto   { background: #2d1e15; color: #e09a6f; }
 
 .grid__empty { text-align: center; color: var(--ink-faint); padding: 3rem 0; font-size: 1.05rem; }
 
@@ -246,7 +249,7 @@ a { color: inherit; text-decoration: none; }
 .about__cta { display: flex; flex-wrap: wrap; gap: .9rem; margin-top: 1.6rem; }
 
 .about__card {
-  background: linear-gradient(150deg, var(--ink), #2a3038); border-radius: var(--radius);
+  background: linear-gradient(150deg, #2a2018, #4a382a); border-radius: var(--radius);
   padding: 2.5rem; box-shadow: var(--shadow-lg); aspect-ratio: 4/3; display: flex;
   flex-direction: column; justify-content: space-between; position: relative; overflow: hidden;
 }
