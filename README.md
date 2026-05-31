@@ -9,22 +9,22 @@ Fusion CAD, laser cutting, full projects, and how-tos.
 ## Stack
 
 A fast, dependency-free static site — plain HTML, CSS, and vanilla JS. No build step.
+Served in production by a tiny zero-dependency Node static server.
 
 ```
-index.html    # page structure & content
-styles.css    # theme tokens, layout, light/dark
-script.js     # theme toggle, filters, scroll reveals, video lightbox
-CNAME         # custom domain for GitHub Pages
-.nojekyll     # serve files as-is on GitHub Pages
+index.html     # page structure & content
+styles.css     # theme tokens, layout, light/dark
+script.js      # theme toggle, filters, scroll reveals, video lightbox
+server.mjs     # static file server (binds to $PORT)
+package.json   # `npm start` runs the server
+railway.json   # Railway build/deploy config
 ```
 
 ## Run locally
 
-Just open `index.html`, or serve it for clean relative paths:
-
 ```bash
-python3 -m http.server 8000
-# then visit http://localhost:8000
+npm start
+# serves on http://localhost:3000 (or $PORT)
 ```
 
 ## Adding a lesson
@@ -40,8 +40,10 @@ The video opens in a lightbox player on click — no embeds load until then.
 
 ## Deploy
 
-Hosted with **GitHub Pages**. Pushing to the default branch publishes the site;
-the `CNAME` file maps it to `learndesign.tech`.
+Hosted on **Railway**. Nixpacks detects Node from `package.json`, builds, and runs
+`npm start` — the server binds to the `PORT` Railway injects. Pushing to the
+connected branch triggers a redeploy. Add `learndesign.tech` as a custom domain in
+the Railway service's **Settings → Networking** and point your DNS there.
 
 ---
 

@@ -1,0 +1,13 @@
+{
+  "name": "learndesign-tech",
+  "version": "1.0.0",
+  "description": "Fox Bright's technological design teaching space",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
